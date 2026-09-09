@@ -2,14 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 import GraphicSpecies from '../../components/GraphicSpecies.astro';
 ---
-<Layout title="Espèce Chinstrap">
-  <nav style="margin-bottom: 2rem; display: flex; gap: 1rem;">
-    <a href="/species/Adelie">Adelie</a>
+<Layout>
+  <nav class="flex gap-4 justify-center p-4 bg-gray-100 mb-8">
+    <a href="/species/Adelie" class="font-bold text-blue-600">Adelie</a>
     <a href="/species/Gentoo">Gentoo</a>
-    <a href="/species/Chinstrap">Chinstrap</a>
-    <a href="/">Retour au Slider</a>
+    <a href="/species/Chinstrap" class="font-bold text-blue-600">Chinstrap</a>
+    <span class="mx-4 text-gray-400">|</span>
+    <a href="/">Retour au Slider (Méthode 2)</a>
   </nav>
-  
-  <h1>Analyse de l'espèce Chinstrap</h1>
-  <GraphicSpecies speciesName="Chinstrap" />
+
+  <h1 class="text-2xl text-center mb-4">Page unique : Chinstrap</h1>
+  <div class="flex justify-center">
+    <!-- On appelle notre composant en lui passant l'espèce -->
+    <GraphicSpecies speciesName="Chinstrap" />
+  </div>
 </Layout>
