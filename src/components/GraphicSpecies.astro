@@ -5,7 +5,6 @@ import * as Plot from "@observablehq/plot";
 
 const { speciesName } = Astro.props;
 
-// Filtrage des pingouins selon l'espèce passée en paramètre
 const filteredPenguins = penguins.filter((p) => p.species === speciesName);
 
 const options = {
