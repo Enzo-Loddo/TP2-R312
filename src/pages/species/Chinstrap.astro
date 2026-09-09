@@ -3,17 +3,24 @@ import Layout from '../../layouts/Layout.astro';
 import GraphicSpecies from '../../components/GraphicSpecies.astro';
 ---
 <Layout>
-  <nav class="flex gap-4 justify-center p-4 bg-gray-100 mb-8">
-    <a href="/species/Adelie" class="font-bold text-blue-600">Adelie</a>
-    <a href="/species/Gentoo">Gentoo</a>
-    <a href="/species/Chinstrap" class="font-bold text-blue-600">Chinstrap</a>
-    <span class="mx-4 text-gray-400">|</span>
-    <a href="/">Retour au Slider (Méthode 2)</a>
-  </nav>
+  <div class="min-h-screen bg-slate-50 font-sans py-10 px-4">
+    <nav class="flex flex-wrap items-center justify-between gap-4 p-3 mb-10 bg-white shadow-sm rounded-2xl border border-slate-200 max-w-3xl mx-auto">
+      <div class="flex gap-2">
+        <a href="/species/Adelie" class="px-5 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors">Adelie</a>
+        <a href="/species/Gentoo" class="px-5 py-2 text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors">Gentoo</a>
+        <a href="/species/Chinstrap" class="px-5 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-full shadow-md">Chinstrap</a>
+      </div>
+      <div class="h-8 w-px bg-slate-200 hidden sm:block"></div>
+      <a href="/" class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors flex items-center gap-2">
+        <span>← Retour au Slider</span>
+      </a>
+    </nav>
 
-  <h1 class="text-2xl text-center mb-4">Page unique : Chinstrap</h1>
-  <div class="flex justify-center">
-    <!-- On appelle notre composant en lui passant l'espèce -->
-    <GraphicSpecies speciesName="Chinstrap" />
+    <main class="max-w-4xl mx-auto flex flex-col items-center">
+      <h1 class="text-3xl font-extrabold text-slate-800 mb-8">Analyse : <span class="text-indigo-600">Chinstrap</span></h1>
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 w-full flex justify-center">
+        <GraphicSpecies speciesName="Chinstrap" />
+      </div>
+    </main>
   </div>
 </Layout>
