@@ -1,7 +1,7 @@
-- URL site WEB :
-- URL Notebook Observable :
-- Nom :
-- Prénom :
+- URL site WEB : 
+- URL Notebook Observable : 
+- Nom : Loddo
+- Prénom : Enzo
 - Nom binome :
 - Prénom binome :
 
