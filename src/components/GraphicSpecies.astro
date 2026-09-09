@@ -1,0 +1,24 @@
+---
+import PlotFigure from './PlotFigure.astro';
+import penguins from '../assets/penguins.json';
+import * as Plot from "@observablehq/plot";
+
+// On récupère le nom de l'espèce passé en paramètre
+const { speciesName } = Astro.props;
+
+// Filtrage des données
+const filteredPenguins = penguins.filter((p) => p.species === speciesName);
+
+const options = {
+  title: `Pingouins de l'espèce ${speciesName}`,
+  grid: true,
+  marks: [
+    Plot.dot(filteredPenguins, {
+      x: "flipper_length_mm",
+      y: "body_mass_g",
+      fill: "species"
+    })
+  ]
+};
+---
+<PlotFigure options={options} />
